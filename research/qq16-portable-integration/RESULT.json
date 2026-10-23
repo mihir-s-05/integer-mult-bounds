@@ -1,0 +1,42 @@
+{
+  "actual_child_returns_per_successful_case": 24,
+  "adapted_source_sha256": "65126e788eeea10e830fc583cf4afe0bfc4d67495cbf8ac21de3507dbe624d56",
+  "boundary_controls": {
+    "frozen_inventory_names": 50,
+    "literal_posix_backslash_distinct": true,
+    "original_authentication_counts": {
+      "frozen_files": 50,
+      "frozen_proofs": 4,
+      "live_inputs": 11,
+      "predecessor_head": "a53fdf4bcbe33c6732f0bec1badc8c023380f9d1"
+    },
+    "rejections": {
+      "changed_adapter_source": "exact PR2753 verifier bytes before portability adaptation",
+      "changed_live_bytes": "pinned bytes changed: certificates/selected-result.json",
+      "changed_predecessor_bytes": "pinned bytes changed: vendor/controller.py",
+      "extra_file": "no omitted or extra predecessor files",
+      "forged_git_blob": "pinned Git blob changed: vendor/controller.py",
+      "missing_nested_file": "no omitted or extra predecessor files",
+      "omitted_invalidation_input": "exact replay invalidation inventory",
+      "omitted_predecessor_pin": "exact predecessor source inventory"
+    }
+  },
+  "cases": [
+    "fixed",
+    "adopt",
+    "stale-engines",
+    "stale-external",
+    "output-alias",
+    "service-stop"
+  ],
+  "completed_generations_per_successful_case": 2,
+  "finite_matched_saving_RWM": {
+    "moves": 49200,
+    "reads": 61488,
+    "writes": 24576
+  },
+  "live_inputs": 142,
+  "original_receipt_canonical_sha256": "1c9579c7e34614030922e51697b511db7bea0a3e4c3a652a54bed162e3e19a67",
+  "scope": "Portability and reproduction of the complete original reduced fixture; no new scientific claim.",
+  "status": "PASS_QQ16_PORTABLE_INTEGRATION"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "task_id": "portable-replay",
+  "priority_revision": 7,
+  "base_commit": "cef4b52f2a59009865bf8eabde1be3f159063703",
+  "original_card": {
+    "id": "portable-replay",
+    "question": "Can one reproducible environment or artifact-comparison failure be repaired?",
+    "starting_points": [
+      "research/gzip-container-reproducibility/README.md",
+      "docs/ci-verification.md"
+    ],
+    "methods": [
+      "Reproduce one portability failure and add a minimal cross-environment fix.",
+      "Audit one canonical-payload comparison for omitted proof-relevant fields."
+    ],
+    "acceptance_gate": "Preserve immutable source hashes and proof-relevant content; a different compressed byte stream alone is not a mathematical mismatch.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the gzip-container reproducibility examples and distinguish frozen source bytes from regenerated payloads.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Reproduce one specific mismatch or audit one canonical comparison for omitted proof-relevant fields.",
+    "bottleneck_link": "Portable exact checks prevent environment failures from blocking valid contributions.",
+    "allowed_variations": [
+      "One interpreter/version mismatch or one payload field comparison."
+    ],
+    "scope_change_triggers": [
+      "Removing immutable-source pins because generated compressed bytes differ."
+    ],
+    "overlap_terms": [
+      "gzip container",
+      "reproducibility",
+      "canonical payload"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Independent Windows/Linux reproduction of the complete PR4790 reduced integration receipt, using a separately implemented source-bound one-expression path serializer and actual PR2753 authentication controls.",
+  "scope_change_reason": "Took the concrete PR4949 handoff under portable-replay. A completed overlap refresh then surfaced an earlier parallel repair claim, so this session narrowed to independent cross-environment evidence and will publish an audit artifact/Discussion finding rather than a competing repair PR.",
+  "bottleneck_link": "The Windows false rejection prevents the actual installed QQ16 caller, native endpoints, ownership guards and controlled cleanup from being checked; this audit restores bounded replay access while keeping inherited mathematical and cost limits explicit.",
+  "budget_minutes": 60,
+  "stop_rule": "One exact path-serialization change only. Stop and report any further source/scientific failure; do not waive a guard or expand into production/full-cost claims.",
+  "outcome": "completed",
+  "evidence": "RESULT.json binds the full original typed receipt and eight source-authentication negative controls. README records native Windows and WSL Linux execution, publication checks, overlap and limitations.",
+  "author": "Mihir Srivastava",
+  "ai_assistance": "Substantial OpenAI Codex assistance; separate AI session sharing original code, fixtures and model assumptions. No independent human or proof-assistant review.",
+  "open_questions": [
+    {
+      "question": "Does the earlier parallel portability implementation reproduce the same complete receipt on both native Windows and Linux?",
+      "why_it_matters": "That corroborates its actual published bytes rather than only this independently implemented adapter.",
+      "first_step": "Pin the parallel session public commit and replay its registered commands on both environments.",
+      "blocked_by": "The earlier implementation was unpublished at this session overlap correction; current status is in the canonical Discussion."
+    },
+    {
+      "question": "What is the complete matched D* versus B* cost, including finite control?",
+      "why_it_matters": "Reproducing the finite D* versus D fixture does not establish an overall improvement.",
+      "first_step": "Use the complete PR4790 census and the PR4753 admitted nonterminal band to price the remaining native/nonchild and control terms.",
+      "blocked_by": "Those costs remain unresolved in the predecessor; no production geometry or full-cost computation is supplied here."
+    }
+  ],
+  "coordination": {
+    "canonical_claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/4744#discussioncomment-19137620",
+    "earlier_parallel_claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/4744#discussioncomment-19137557",
+    "handoff": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19137316",
+    "initial_overlap": {
+      "open_prs": 315,
+      "discussion_records": 4037,
+      "local_notes": 6601,
+      "all_head_notes": true,
+      "snapshot_utc": "2026-10-23T03:50:20Z to 03:51:39Z",
+      "limits": "No exhaustive arbitrary closed diffs, nested sources or unpublished work."
+    }
+  }
+}

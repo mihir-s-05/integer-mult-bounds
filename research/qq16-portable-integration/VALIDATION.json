@@ -1,0 +1,124 @@
+{
+  "status": "PASS_INDEPENDENT_CROSS_PLATFORM_RECEIPT_AUDIT",
+  "base_commit": "cef4b52f2a59009865bf8eabde1be3f159063703",
+  "pre_submission_main": "b91956876e5b4122fd89179f1b57557ff8378f15",
+  "priority_revision": 7,
+  "relevant_upstream_changes": [],
+  "original_pr4790_head": "38dd6b59d50d346bb34fea02a4ee1ac8d282ebbf",
+  "original_receipt_canonical_sha256": "1c9579c7e34614030922e51697b511db7bea0a3e4c3a652a54bed162e3e19a67",
+  "portable_receipt_canonical_sha256": "9fbe12bd2dd9bf5540e144e0307317565e2e8e9afa8a6e9e982d36d5bed4b34a",
+  "platforms": {
+    "windows": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.0"
+    },
+    "linux": {
+      "platform": "Linux 6.6.114.1-microsoft-standard-WSL2 (Ubuntu)",
+      "python": "3.12.3"
+    }
+  },
+  "runs": [
+    {
+      "environment": "windows",
+      "argv": [
+        "python",
+        "-I",
+        "-B",
+        "research/qq16-protected-return-caller/verify.py",
+        "--case",
+        "fixed"
+      ],
+      "result": "EXPECTED_FAILURE_BEFORE_RETURNS",
+      "boundary": "PR2753 authenticate physical inventory: no omitted or extra predecessor files"
+    },
+    {
+      "environment": "linux",
+      "argv": [
+        "python3",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "research/qq16-protected-return-caller/verify.py"
+      ],
+      "result": "PASS_QQ16_PROTECTED_RETURN_CALLER"
+    },
+    {
+      "environment": "windows",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/research_package.py",
+        "--package",
+        "research/qq16-portable-integration"
+      ],
+      "result": "PASS_REGISTERED_RESEARCH_PACKAGE; normal and optimized commands both passed"
+    },
+    {
+      "environment": "linux",
+      "argv": [
+        "python3",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "research/qq16-portable-integration/verify.py",
+        "--json"
+      ],
+      "result": "PASS_QQ16_PORTABLE_INTEGRATION; full portable receipt matches Windows"
+    },
+    {
+      "environment": "linux",
+      "argv": [
+        "python3",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "research/qq16-portable-integration/verify.py",
+        "--json"
+      ],
+      "result": "PASS_QQ16_PORTABLE_INTEGRATION; full portable receipt matches normal mode"
+    },
+    {
+      "environment": "windows",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "result": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY"
+    }
+  ],
+  "authenticated_inputs": 142,
+  "original_integration_cases": [
+    "fixed",
+    "adopt",
+    "stale-engines",
+    "stale-external",
+    "output-alias",
+    "service-stop"
+  ],
+  "authentication_negative_controls": [
+    "changed_adapter_source",
+    "changed_live_bytes",
+    "changed_predecessor_bytes",
+    "extra_file",
+    "forged_git_blob",
+    "missing_nested_file",
+    "omitted_invalidation_input",
+    "omitted_predecessor_pin"
+  ],
+  "publication_evidence": "The canonical Discussion records the final published commit, committed-byte/export integrity and exported replay checks; this file does not embed a self-referential commit/archive digest.",
+  "unrun": [
+    "production O73/RootLayer execution",
+    "full D* versus B* cost",
+    "full historical suite",
+    "Lean",
+    "Docker",
+    "independent human or kernel proof review",
+    "optional full-history ancestry preflight (shallow checkout; every declared source pin is at the direct base commit)"
+  ],
+  "assistance": "Substantial OpenAI Codex assistance; separate session sharing original source and model assumptions."
+}
