@@ -46,15 +46,15 @@
   "budget_minutes": 60,
   "stop_rule": "One exact path-serialization change only. Stop and report any further source/scientific failure; do not waive a guard or expand into production/full-cost claims.",
   "outcome": "completed",
-  "evidence": "RESULT.json binds the full original typed receipt and eight source-authentication negative controls. README records native Windows and WSL Linux execution, publication checks, overlap and limitations.",
+  "evidence": "RESULT.json binds the full original typed receipt and eight source-authentication negative controls. README records native Windows and WSL Linux execution, publication checks, overlap and limitations. PEER-REVIEW.md/JSON records independent four-mode exact-source corroboration of PR4956 at a3632acbab32202015f0c5ecd11360e92e9a0f10; COLD-EXPORT.json retains the independent implementation export checks at 5920476f5f511579de2c5daa12b5703ea96e5f69.",
   "author": "Mihir Srivastava",
   "ai_assistance": "Substantial OpenAI Codex assistance; separate AI session sharing original code, fixtures and model assumptions. No independent human or proof-assistant review.",
   "open_questions": [
     {
-      "question": "Does the earlier parallel portability implementation reproduce the same complete receipt on both native Windows and Linux?",
-      "why_it_matters": "That corroborates its actual published bytes rather than only this independently implemented adapter.",
-      "first_step": "Pin the parallel session public commit and replay its registered commands on both environments.",
-      "blocked_by": "The earlier implementation was unpublished at this session overlap correction; current status is in the canonical Discussion."
+      "question": "Does a future changed loader or path inventory preserve the same complete authenticated scientific replay?",
+      "why_it_matters": "The current adapter deliberately accepts only one exact frozen source image; this is not a general loader migration proof.",
+      "first_step": "Pin the changed source, identify its exact syntax delta, and replay all source/receipt controls and all original cases.",
+      "blocked_by": "No future changed source is evaluated here. The earlier published PR4956 at a3632acbab32202015f0c5ecd11360e92e9a0f10 is now independently corroborated."
     },
     {
       "question": "What is the complete matched D* versus B* cost, including finite control?",

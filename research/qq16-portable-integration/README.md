@@ -16,6 +16,13 @@ without a competing repair PR. The two implementations share predecessor
 code, fixtures and mathematical assumptions. This is a separate AI session,
 not independent human or formal-kernel verification.
 
+**Published-peer follow-up:** [PR4956](https://github.com/CrocSwap/integer-mult-bounds/pull/4956)
+at `a3632acbab32202015f0c5ecd11360e92e9a0f10` has now also been independently
+replayed on both systems in both modes. All four reports match. The complete
+AST differs in exactly the intended expression. [PEER-REVIEW.md](PEER-REVIEW.md)
+and [PEER-REVIEW.json](PEER-REVIEW.json) record that separate exact-source audit;
+the registered commands below continue to check this independent implementation.
+
 ## Exact source and failure
 
 Base: canonical main `cef4b52f2a59009865bf8eabde1be3f159063703`, priority revision 7.
@@ -40,6 +47,10 @@ Its `authenticate` function serializes the 50 predecessor paths using
 `vendor/` names acquire backslashes and the exact POSIX inventory rejects with
 `no omitted or extra predecessor files`. This is a source-name representation
 mismatch; it does not establish a mathematical or ownership defect.
+Mainzu had already identified this same frozen PR2753 mismatch and recorded a
+local path-shim replay in
+[selected-stock-rho-ledger](https://github.com/CrocSwap/integer-mult-bounds/blob/cef4b52f2a59009865bf8eabde1be3f159063703/research/selected-stock-rho-ledger/README.md#pr3385-replay-and-b1s-fit).
+That observation is credited prior work, not a new diagnosis here.
 
 [adapter.py](adapter.py) authenticates those exact bytes and replaces only the
 generator element with `path.relative_to(here / 'predecessor').as_posix()`.
@@ -119,7 +130,8 @@ JoyboyBrian supplies PR4790's original composition, verifier and receipt.
 Chris R / Clear1nsight supplies #4166/#4167/#4172/#4177's caller, return exchange,
 tariff and cleanup/cost lineage. DavidAriasC supplies PR2753's authentication
 and logical caller; Jose Manuel supplies the physical controller/loader
-lineage. Tekalign's finite-role exchange work, Sagar Thakrar, ywz65, Ali Romman,
+lineage. Mainzu supplies the earlier Windows observation and local shim replay.
+Tekalign's finite-role exchange work, Sagar Thakrar, ywz65, Ali Romman,
 Arham Tahir and every retained source notice keep their predecessor credit.
 The earlier parallel portability session has priority for its repair effort;
 this artifact is corroborating evidence, not an originality claim.
@@ -129,9 +141,10 @@ Mihir Srivastava with substantial OpenAI Codex assistance. Apache-2.0.
 
 ## Open next questions
 
-The structured questions are in [TASK.json](TASK.json). A useful immediate
-follow-up is to pin and corroborate the earlier session's **published** adapter
-on both environments; this artifact by itself does not validate unpublished
-peer bytes. The scientific follow-up remains the complete matched D* versus B*
-bill, including finite control and the unmatched native/nonchild terms in the
-admitted nonterminal band. This portability result supplies no missing cost.
+The structured questions are in [TASK.json](TASK.json). The exact published
+peer adapter has now been corroborated, as recorded above. A future changed
+loader or inventory needs a new source-bound adaptation check; the current
+exact hash is intentionally restrictive. The scientific follow-up remains the
+complete matched D* versus B* bill, including finite control and the unmatched
+native/nonchild terms in the admitted nonterminal band. This portability result
+supplies no missing cost.

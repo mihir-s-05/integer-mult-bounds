@@ -120,5 +120,7 @@
     "independent human or kernel proof review",
     "optional full-history ancestry preflight (shallow checkout; every declared source pin is at the direct base commit)"
   ],
-  "assistance": "Substantial OpenAI Codex assistance; separate session sharing original source and model assumptions."
+  "assistance": "Substantial OpenAI Codex assistance; separate session sharing original source and model assumptions.",
+  "peer_review": "PEER-REVIEW.json; exact published PR4956 source and four Git-free Windows/Linux normal/optimized replays.",
+  "cold_export": "COLD-EXPORT.json records the independent scientific package at 5920476f5f511579de2c5daa12b5703ea96e5f69 before these documentary peer-review additions."
 }

@@ -1,0 +1,26 @@
+{
+  "archive_sha256": "45551c99a5bc830ebd9f0d3d8ca3b43a02324613b48ce00fb3012e50400589c9",
+  "declared_files": 150,
+  "files_including_export_receipt": 151,
+  "checks": [
+    {
+      "mode": "normal",
+      "status": "PASS_READ_ONLY_GIT_FREE_EXPORT",
+      "seconds": 45.391
+    },
+    {
+      "mode": "optimized",
+      "status": "PASS_READ_ONLY_GIT_FREE_EXPORT",
+      "seconds": 45.984
+    },
+    {
+      "mode": "normal",
+      "status": "PASS_CORRUPTED_ORIGINAL_VERIFIER_REJECTED"
+    },
+    {
+      "mode": "optimized",
+      "status": "PASS_CORRUPTED_ORIGINAL_VERIFIER_REJECTED"
+    }
+  ],
+  "original_bytes_preserved": true
+}
