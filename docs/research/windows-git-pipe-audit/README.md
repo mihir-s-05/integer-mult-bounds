@@ -149,6 +149,14 @@ job tests were read. Local note coverage was initially sparse and was expanded
 before the final check. Search coverage is evidence about the inspected corpus,
 not a novelty guarantee or a search of every historical diff.
 
+The live submission checkpoint found a [concurrent native audit](https://github.com/CrocSwap/integer-mult-bounds/discussions/4681#discussioncomment-19170434)
+and a [separate streaming-adapter claim](https://github.com/CrocSwap/integer-mult-bounds/discussions/4681#discussioncomment-19170460)
+posted during this session. This source-pinned fork artifact is published as
+independent corroboration and a shared fixture handoff, with no overlapping
+audit PR. The closed-snapshot replay and all three receipts make the observation
+independently inspectable; they do not establish priority or novelty over the
+parallel audit. The adapter's production-adoption review remains separate.
+
 Brian / JoyboyBrian supplies #4738's response deadlines and #5185's POSIX
 descendant fixtures; this audit retains that failure-model lineage. Nick
 Petalas supplies the #2752 fallback. Mihir Srivastava's #4686/#5358 provide the
@@ -161,8 +169,9 @@ one agent. New work is Apache-2.0.
 
 ## Open next questions
 
-The next useful step is a Windows ownership boundary around the **streaming Git
-reader**, established before its child can spawn descendants. A candidate must
+The coordinated adapter claim above is the next implementation step: a Windows
+ownership boundary around the **streaming Git reader**, established before its
+child can spawn descendants. A candidate must
 release retained pipes on timeout, malformed response, successful exhaustion
 and early generator close, while preserving one-blob streaming, exact bytes,
 the first-request/no-response/exit-129 fallback and pauses between yielded blobs.
