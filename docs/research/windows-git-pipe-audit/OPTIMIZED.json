@@ -1,0 +1,231 @@
+{
+  "status": "CONFIRMED_PINNED_WINDOWS_READER_LIMITATION",
+  "base": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "source_sha256": "84a45190a6a96c20993a0d4a1045fbf24de660d2e6fef8f8a447bb3d1aa78db6",
+  "probe_sha256": "f85c9c7ba10bb959c30e346587768b15d84faaae475876e4f28a6dd8d701287d",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "optimized": 1,
+  "response_seconds": 0.5,
+  "post_stop_observation_seconds": 0.75,
+  "outer_guard_seconds": 30,
+  "cases": [
+    {
+      "phase": "header",
+      "inheritance": "retained",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "blocked_after_deadline": true,
+        "observed_seconds_after_stop": 0.766
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "observer termination"
+    },
+    {
+      "phase": "header",
+      "inheritance": "redirected",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "error": "ValueError",
+        "launches": 1,
+        "leader_returncodes": [
+          0
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "normal release"
+    },
+    {
+      "phase": "payload",
+      "inheritance": "retained",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "blocked_after_deadline": true,
+        "observed_seconds_after_stop": 0.782
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "observer termination"
+    },
+    {
+      "phase": "payload",
+      "inheritance": "redirected",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "error": "ValueError",
+        "launches": 1,
+        "leader_returncodes": [
+          0
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "normal release"
+    },
+    {
+      "phase": "terminator",
+      "inheritance": "retained",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "blocked_after_deadline": true,
+        "observed_seconds_after_stop": 0.765
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "observer termination"
+    },
+    {
+      "phase": "terminator",
+      "inheritance": "redirected",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "error": "ValueError",
+        "launches": 1,
+        "leader_returncodes": [
+          0
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "normal release"
+    },
+    {
+      "phase": "write",
+      "inheritance": "retained",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "blocked_after_deadline": true,
+        "observed_seconds_after_stop": 0.765
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "observer termination"
+    },
+    {
+      "phase": "write",
+      "inheritance": "redirected",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "error": "ValueError",
+        "launches": 1,
+        "leader_returncodes": [
+          0
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "normal release"
+    },
+    {
+      "phase": "header",
+      "inheritance": "direct",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false
+      },
+      "reader": {
+        "error": "TimeoutExpired",
+        "launches": 1,
+        "leader_returncodes": [
+          1
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false
+      },
+      "worker_finish": "normal release"
+    },
+    {
+      "phase": "success",
+      "inheritance": "retained",
+      "ready_before_request": true,
+      "before_teardown_alive": {
+        "worker": true,
+        "leader": false,
+        "holder": true
+      },
+      "reader": {
+        "exact_binary_reply": true,
+        "launches": 1,
+        "leader_returncodes": [
+          0
+        ]
+      },
+      "after_outer_job_alive": {
+        "worker": false,
+        "leader": false,
+        "holder": false
+      },
+      "worker_finish": "normal release"
+    }
+  ],
+  "scope": "Controlled Python subprocesses replace Git; outer job cleanup is not reader cleanup."
+}

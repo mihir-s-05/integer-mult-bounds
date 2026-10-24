@@ -1,0 +1,13 @@
+{
+  "snapshot_files": {
+    "probe.py": "f85c9c7ba10bb959c30e346587768b15d84faaae475876e4f28a6dd8d701287d",
+    "research_package.py": "84a45190a6a96c20993a0d4a1045fbf24de660d2e6fef8f8a447bb3d1aa78db6"
+  },
+  "identical_after": true,
+  "git_directory": false,
+  "PATH": "",
+  "optimized": true,
+  "elapsed_seconds": 59.938,
+  "source_drift_exit": 1,
+  "source_drift_receipt_absent": true
+}
