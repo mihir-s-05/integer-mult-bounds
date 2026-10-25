@@ -1,0 +1,178 @@
+{
+  "schema": "windows-stream-owner-death/v1",
+  "source_sha256": {
+    "reader": "84a45190a6a96c20993a0d4a1045fbf24de660d2e6fef8f8a447bb3d1aa78db6",
+    "adapter": "01f597c8ecb955b2ef7faa8f0650e67c0eca5c0d5f6a817a181c536bef9c37aa"
+  },
+  "probe_sha256": "441f60d21a1972c81730a7c7fccfc82d6f351a209c1f9aa0fc5af7371b0c224a",
+  "platform": "win32",
+  "windows_version": [
+    10,
+    0,
+    26300,
+    2,
+    ""
+  ],
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "optimized": 0,
+  "cases": [
+    {
+      "case": "before-event-open",
+      "cut": "before-assign",
+      "gate_in_private_job": false,
+      "target_started": false,
+      "target_marker_after": false,
+      "alive_after": {
+        "owner": false,
+        "gate": false
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 1
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.062,
+      "gate_outcome": {
+        "type": "FileNotFoundError",
+        "winerror": 2,
+        "message": "[WinError 2] The system cannot find the file specified."
+      },
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "before-assign",
+      "cut": "before-assign",
+      "gate_in_private_job": false,
+      "target_started": false,
+      "target_marker_after": false,
+      "alive_after": {
+        "owner": false,
+        "gate": false
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 1
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 29.984,
+      "gate_alive_after_owner_death": true,
+      "gate_outcome": {
+        "type": "RuntimeError",
+        "winerror": null,
+        "message": "replay ownership gate was not released"
+      },
+      "gate_wait_result": 258,
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "before-release",
+      "cut": "before-release",
+      "gate_in_private_job": true,
+      "target_started": false,
+      "target_marker_after": false,
+      "alive_after": {
+        "owner": false,
+        "gate": false
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 0
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.016,
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "running",
+      "cut": "running",
+      "gate_in_private_job": true,
+      "target_started": true,
+      "target_marker_after": true,
+      "alive_after": {
+        "owner": false,
+        "gate": false,
+        "target": false,
+        "leaf": false
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 0,
+        "target": 0,
+        "leaf": 0
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.0,
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "live-owner",
+      "cut": "before-release",
+      "gate_in_private_job": true,
+      "target_started": true,
+      "target_marker_after": true,
+      "alive_after": {
+        "owner": false,
+        "gate": false,
+        "target": false,
+        "leaf": false
+      },
+      "exit_codes": {
+        "owner": 0,
+        "gate": 1,
+        "target": 1,
+        "leaf": 1
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.063,
+      "closed_gate_observation_seconds": 0.3,
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "early-release-control",
+      "cut": "before-assign",
+      "gate_in_private_job": false,
+      "target_started": true,
+      "target_marker_after": true,
+      "alive_after": {
+        "owner": false,
+        "gate": true,
+        "target": true,
+        "leaf": true
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 259,
+        "target": 259,
+        "leaf": 259
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.297,
+      "counterfactual_rejected": "requested command ran before ownership",
+      "teardown_all_retained_processes_stopped": true
+    },
+    {
+      "case": "no-kill-control",
+      "cut": "running",
+      "gate_in_private_job": true,
+      "target_started": true,
+      "target_marker_after": true,
+      "alive_after": {
+        "owner": false,
+        "gate": true,
+        "target": true,
+        "leaf": true
+      },
+      "exit_codes": {
+        "owner": 91,
+        "gate": 259,
+        "target": 259,
+        "leaf": 259
+      },
+      "observation_before_fixture_teardown": true,
+      "observation_seconds": 0.297,
+      "counterfactual_rejected": "owned process survived owner completion",
+      "teardown_all_retained_processes_stopped": true
+    }
+  ],
+  "status": "PASS_WINDOWS_STREAM_OWNER_DEATH"
+}

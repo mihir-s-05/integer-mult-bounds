@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "scripts/research_package.py",
+    "LICENSE"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 220,
+      "checks": "Seven native Windows lifecycle cuts/controls with an independent outer Job Object, or explicitly labelled stored-receipt integrity only on other platforms; five rejecting receipt controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 220,
+      "checks": "The same explicit checks under optimized Python; no assertions are relied on."
+    }
+  ]
+}

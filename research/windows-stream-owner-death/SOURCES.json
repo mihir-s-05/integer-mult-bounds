@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "scripts/research_package.py",
+      "usage": "input",
+      "git_blob": "48fe9feb4699c09e95505d95c327ea998ac8b3a7",
+      "sha256": "84a45190a6a96c20993a0d4a1045fbf24de660d2e6fef8f8a447bb3d1aa78db6"
+    },
+    {
+      "path": "LICENSE",
+      "usage": "input",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "vendored_predecessor": {
+    "path": "research/windows-git-stream-ownership/owned_pipe.py",
+    "git_blob": "8150b9a79df8fa59997caffe96f28889a3452c6e",
+    "sha256": "01f597c8ecb955b2ef7faa8f0650e67c0eca5c0d5f6a817a181c536bef9c37aa",
+    "commit": "991da9010925914ec64a5293286edb10a7910218",
+    "source_pr": 5463,
+    "repository": "CrocSwap/integer-mult-bounds",
+    "vendored_path": "vendor/owned_pipe.py",
+    "provenance": "Fetched from the explicit PR5463 head and compared byte-for-byte. That pending head is not publication ancestry; this record is authenticated by the direct verifier, not the registered Git-provenance row checker."
+  }
+}
