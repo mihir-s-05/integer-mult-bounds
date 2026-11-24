@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 20,
+      "checks": "All odd six-bit pairs against ordinary multiplication and polynomial factor labels, full raw convolution, table-free projections, row/collision controls and gate counts."
+    }
+  ]
+}
