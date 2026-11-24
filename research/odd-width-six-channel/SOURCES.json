@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "base_commit": "e54523517d0f03e58352e647c403a5af3e525a57",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "75d77b328ea02ded535e7f23aee5b1e55d0bb1a8",
+      "sha256": "154c3d30455d778fd3343b6b4851f0fa4665f0f7625b0adb3675e2bafbbf6bf1"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    }
+  ],
+  "predecessor": {
+    "author": "Chris R / Clear1nsight",
+    "pull_request": "https://github.com/CrocSwap/integer-mult-bounds/pull/7838",
+    "commit": "cd9ce5a555977b469bd848199bc36025bd82fdcb",
+    "path": "research/carryless-middle-bit-rank/ODD-WIDTH.md",
+    "git_blob": "a5711b3d520572886b2e0de524f11f56570fa40f",
+    "sha256": "5ad04c6fb0b4ebb439b5560ee730d75d389e20576e4af3e9a782c3c6b33d18b2",
+    "use": "External mathematical provenance for the handoff and lower bound. The standalone circuit and verifier use no predecessor files at runtime.",
+    "handoff": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19769396"
+  }
+}

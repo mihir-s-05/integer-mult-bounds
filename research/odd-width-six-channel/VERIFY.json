@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 15,
+      "checks": "All 1,024 odd pairs against ordinary multiplication, inverse encoder by factorization, literal channel coefficients, collision and width checks, missing-sign and high-coefficient controls, and exact gate counts."
+    }
+  ]
+}
